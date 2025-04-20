@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Choice Mall</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f1ba88, #e9f5be, #81e7af, #03a791);
+      color: #222;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      max-width: 800px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .category {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .category:hover {
+      transform: scale(1.05);
+    }
+    .category img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Choice</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="wear.html">Wear</a>
+      <a href="gadgets.html">Gadgets</a>
+      <a href="electronics.html">Electronics</a>
+      <a href="books.html">Books</a>
+      <a href="business.html">Business Strategy</a>
+      <a href="login.html">Login</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Your One-Stop Shop for All Student Essentials</h2>
+    <p>Everything a student needs in one place — Smart, Affordable, Reliable.</p>
+  </section>
+
+  <section class="categories">
+    <div class="category">
+      <a href="wear.html">
+        <img src="images/wear.jpg" alt="Student Wear">
+        <h3>Student Wear</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="gadgets.html">
+        <img src="images/gadgets.jpg" alt="Student Gadgets">
+        <h3>Student Gadgets</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="electronics.html">
+        <img src="images/electronics.jpg" alt="Student Electronics">
+        <h3>Student Electronics</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="books.html">
+        <img src="images/books.jpg" alt="Student Books">
+        <h3>Student Books</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="business.html">
+        <img src="images/business.jpg" alt="Student Business">
+        <h3>Business Strategy</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="cart.html">
+        <img src="images/cart.jpg" alt="Student Cart">
+        <h3>View Cart</h3>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Student Choice Mall | Built for Students, by Students</p>
+  </footer>
+
+</body>
+</html>

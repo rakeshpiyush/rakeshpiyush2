@@ -1,0 +1,164 @@
+<!-- electronics.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Electronics - Student Choice</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      background: #ffffffdd;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      margin: 0;
+      color: #ff7f50;
+    }
+    .header a.cart-link {
+      text-decoration: none;
+      background-color: #ff7f50;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .header a.cart-link:hover {
+      background-color: #ff5722;
+    }
+
+    .electronics-container {
+      background: #fff8f0;
+      padding: 30px 40px;
+      margin: 30px auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+      max-width: 1000px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+    .electronics-container h2 {
+      margin-bottom: 25px;
+      color: #ff7f50;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+    .product p {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .price {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ff7f50;
+      margin: 8px 0;
+    }
+    .product button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #ff7f50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .product button:hover {
+      background-color: #ff5722;
+    }
+  </style>
+  <script>
+    function addToCart(productName, productPrice) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ name: productName, price: productPrice });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(productName + " added to cart!");
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Student Electronics</h1>
+    <a class="cart-link" href="cart.html">View Cart 🛒</a>
+  </div>
+  <div class="electronics-container">
+    <h2>Student Electronics Collection</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71DozMyPCBL._AC_UF1000,1000_QL80_.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>High-performance laptops for every student budget.</p>
+        <div class="price">₹42,000</div>
+        <button onclick="addToCart('Laptop', 42000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61USODKUVlL._AC_UF1000,1000_QL80_.jpg" alt="Tablet">
+        <h3>Tablet</h3>
+        <p>Lightweight and versatile devices for note-taking.</p>
+        <div class="price">₹18,000</div>
+        <button onclick="addToCart('Tablet', 18000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG8HRN5xn6MBsX_mhGeRfP9ugmVaWnrGMDGA&s" alt="Monitor">
+        <h3>Monitor</h3>
+        <p>Wider screens for multitasking and productivity.</p>
+        <div class="price">₹12,000</div>
+        <button onclick="addToCart('Monitor', 12000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/512f8pCW7vL._AC_UF1000,1000_QL80_.jpg" alt="Printer">
+        <h3>Printer</h3>
+        <p>Compact printers perfect for dorm rooms and assignments.</p>
+        <div class="price">₹6,500</div>
+        <button onclick="addToCart('Printer', 6500)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
